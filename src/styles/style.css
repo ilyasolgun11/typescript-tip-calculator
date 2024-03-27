@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+body {
+  background-color: rgb(193, 215, 216);
+  font-family: "Space Mono", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+h2 {
+  margin-top: -14px;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0px auto;
+  display: flex;
+  padding: 19px 56px 10px 30px;
+  border-radius: 13px;
+  background-color: white;
+}
+
+.col-6:nth-of-type(1) {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 30px;
+}
+
+.col-6:nth-of-type(2) {
+  width: 50%;
+  color: white;
+  padding: 30px;
+  border-radius: 13px;
+  background-color: rgb(0, 73, 77);
+  margin: 16px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-container {
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgb(0, 73, 77);
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+#bill-required,
+#tip-required {
+  display: none;
+  color: rgb(199, 16, 16);
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.item-container:nth-of-type(3) {
+  margin-bottom: 0px;
+}
+
+.input-group {
+  margin-bottom: 0px;
+  width: 100%;
+  position: relative;
+}
+
+.input-group input,
+.input-group input:focus {
+  margin-top: 5px;
+  padding-right: 20px;
+  width: 100%;
+  outline: none;
+  border: 3px solid rgba(0, 73, 77, 0.137);
+  color: rgb(0, 73, 77);
+  font-weight: 700;
+  font-size: 1.6rem;
+  height: 70px;
+  border-radius: 6px !important;
+  text-align: end;
+  background-color: white;
+}
+
+.input-group span {
+  color: rgba(0, 73, 77, 0.407);
+  font-size: 2.2rem;
+  z-index: 10;
+  position: absolute;
+  top: 14.5px;
+  left: 16px;
+}
+
+.input-group .fa-user {
+  position: absolute;
+  font-size: 1.4rem;
+  top: 15px;
+}
+
+.total-amounts-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tip-amount-pp-container,
+.total-bill-pp-container,
+.total-bill-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.tip-amount-pp-container h4,
+.total-bill-pp-container h4,
+.total-bill-container h4 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.144);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.tip-amount-pp-container h5,
+.total-bill-pp-container h5,
+.total-bill-container h5 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+}
+
+.total-bill-container h5 {
+  margin-top: 0px;
+}
+
+.tip-amount-pp-container h5:nth-of-type(2),
+.total-bill-pp-container h5:nth-of-type(2),
+.total-bill-container h5:nth-of-type(2) {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  font-weight: 400;
+  color: rgb(215, 215, 215);
+}
+
+.total-bill-container {
+  margin-bottom: 50px;
+}
+
+#calculate,
+#reset {
+  position: relative;
+  border-radius: 6px;
+  border: none;
+  padding: 14px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: rgb(35, 35, 35);
+  background: white;
+  transition: background 0.2s ease;
+}
+
+#reset {
+  background-color: rgb(165, 251, 255);
+  margin-top: 7px;
+}
+
+#calculate:hover {
+  background: rgb(165, 251, 255);
+}
+
+#reset:hover {
+  background: white;
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    height: auto;
+  }
+  h1 {
+    margin-top: 20px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .main-container {
+    width: 95%;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .col-6:nth-of-type(1),
+  .col-6:nth-of-type(2) {
+    width: 100%;
+  }
+
+  .item-container {
+    margin-bottom: 10px;
+  }
+
+  #bill-required,
+  #tip-required {
+    font-size: 0.9rem;
+  }
+
+  .tip-amount-pp-container h4,
+  .total-bill-pp-container h4,
+  .total-bill-container h4 {
+    font-size: 1.9rem;
+  }
+
+  .tip-amount-pp-container h5,
+  .total-bill-pp-container h5,
+  .total-bill-container h5 {
+    font-size: 1rem;
+    margin-bottom: -8px;
+  }
+
+  .total-bill-container h5 {
+    margin-top: 0px;
+  }
+}
