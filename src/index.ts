@@ -23,11 +23,15 @@ calculateBtn?.addEventListener("click", () => {
     }
 
     const totalTipAmount = (billValue * tipPercentageValue) / 100;
-    const totalBillCalc = billValue + totalTipAmount;
-    const totalAmountPpCalc = (totalBillCalc / amountOfPeopleValue).toFixed(2);
-    const totalTipAmountPpCalc = (totalTipAmount / amountOfPeopleValue).toFixed(
-      2
-    );
+    const totalBillCalc = billValue + totalTipAmount + 0.01;
+    const totalAmountPpCalc = (
+      totalBillCalc / amountOfPeopleValue +
+      0.01
+    ).toFixed(2);
+    const totalTipAmountPpCalc = (
+      totalTipAmount / amountOfPeopleValue +
+      0.01
+    ).toFixed(2);
 
     billRequired!.style.display = "none";
     tipRequired!.style.display = "none";
